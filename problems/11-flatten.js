@@ -13,7 +13,16 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
 function flatten(arr) {
-  // Your code here 
+  debugger
+const result = [];
+arr.forEach((item) => {
+  if (Array.isArray(item)) {
+    result.push(...flatten(item));
+  } else {
+    result.push(item);
+  }
+})
+ return result
 }
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

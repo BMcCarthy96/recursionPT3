@@ -12,7 +12,11 @@ isSorted([5, 4, 3, 2, 1]); // false
 
 
 function isSorted(arr) {
-  // Your code here 
+  if (arr[0] > arr[arr.length - 1]) return false
+let pair = arr[1] - arr[0]
+  if (pair <= 0) return false
+  if (arr.length === 0) return true
+  return isSorted(arr.slice(1))
 }
 
 
